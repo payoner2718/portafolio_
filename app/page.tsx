@@ -5,8 +5,8 @@
  ************************************************/
 
 import React, { useState, useEffect } from 'react';
-import { MapPin, ChevronDown, ArrowRight,Map, Search, Clock, UserCircle,Lightbulb, Target, Trophy } from 'lucide-react';
-
+import { ArrowRight, Map, Search, Clock, UserCircle, Lightbulb, Target, Trophy } from 'lucide-react';
+import Image from 'next/image';
 
 
 /**
@@ -193,11 +193,13 @@ const Portfolio = () => {
     
     {/* Bottom Image */}
     <div className="mt-4">
-      <img 
-        src="/graph_1.png"
-        alt="Mapa de calor de incidencia"
-        className="rounded-lg w-full max-w-5xl mx-auto"
-      />
+    <Image 
+  src="/graph_1.png"
+  alt="Mapa de calor de incidencia"
+  width={1024}  // specify appropriate width
+  height={768}  // specify appropriate height
+  className="rounded-lg w-full max-w-5xl mx-auto"
+/>
 
         {/* Key Takeaway Box */}
         <div className="mt-16 bg-gray-100 rounded-xl p-8">
@@ -381,12 +383,12 @@ const Portfolio = () => {
         <h3 className="text-xl font-semibold mb-2 text-gray-900 p-4 text-center"> {/* Added text-center */}
             Mapa Interactivo de Cobertura
         </h3>
-        <div className="w-full h-[600px] rounded-lg overflow-hidden"> {/* Reduced height to 600px */}
+        <div className="w-full h-[500px] rounded-lg overflow-hidden"> {/* Reduced height to 600px */}
             <iframe 
                 src="/maps/kepler_isochrones_map.html" 
                 className="w-full h-full border-0"
                 title="Mapa de cobertura de centros LUNA"
-                style={{ minHeight: '600px' }}
+                style={{ minHeight: '500px' }}
             />
         </div>
     </div>
