@@ -4,33 +4,13 @@
  * IMPORTS AND COMPONENT DECLARATIONS
  ************************************************/
 
-import React, { useState, useEffect } from 'react';
+
 import { ArrowRight, Map, Search, Clock, UserCircle, Lightbulb, Target, Trophy } from 'lucide-react';
 import Image from 'next/image';
 
 
-/**
- * TypewriterText Component
- * @description Animated text effect for main title
- */
 
-const TypewriterText = ({ text }) => {
-  const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText(prev => prev + text[currentIndex]);
-        setCurrentIndex(prev => prev + 1);
-      }, 100);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [currentIndex, text]);
-
-  return <span>{displayText}</span>;
-};
 
 /**
  * Main Portfolio Component
@@ -73,7 +53,7 @@ const Portfolio = () => {
     <div className="relative px-8 pt-32 md:pt-40 max-w-7xl mx-auto">
        <div className="space-y-8">
             <h1 className="text-8xl md:text-10xl font-bold text-gray-900 tracking-tight text-left">
-              <TypewriterText text="¿QUIÉN CUIDA A LAS QUE CUIDAN?" />
+              ¿QUIÉN CUIDA A LAS QUE CUIDAN?
             </h1>
             <p className="text-3xl md:text-3xl text-gray-800 max-w-3xl font-light text-left">
               Análisis espacial e identificación de áreas prioritarias para la 
