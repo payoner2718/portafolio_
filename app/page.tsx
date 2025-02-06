@@ -365,7 +365,7 @@ const Portfolio = () => {
         </h3>
         <div className="w-full h-[500px] rounded-lg overflow-hidden"> {/* Reduced height to 600px */}
             <iframe 
-                src="/maps/kepler_isochrones_map.html" 
+                src="/kepler_isochrones_map.html" 
                 className="w-full h-full border-0"
                 title="Mapa de cobertura de centros LUNA"
                 style={{ minHeight: '500px' }}
